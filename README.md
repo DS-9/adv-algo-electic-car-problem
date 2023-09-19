@@ -69,3 +69,4 @@ current = current.next
 stopsList.append(cityList[-1])
 print("Output-> Here are the suggested stops: " + str(stopsList))
 ```
+The time complexity for the above code is linear that is O(n) where n is the number of cities.
