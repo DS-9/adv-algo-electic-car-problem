@@ -70,3 +70,30 @@ stopsList.append(cityList[-1])
 print("Output-> Here are the suggested stops: " + str(stopsList))
 ```
 The time complexity for the above code is linear that is O(n) where n is the number of cities.
+
+## Pseudocode 2:
+Data Structure - List. Here we have used two lists for the input and one list for the output.
+```
+maxCharge = max mileage that car gives per charge
+cityList = list of cities/nodes
+vertexCostList = Enter the list of costs
+if len(vertexCostList) != len(cityList) - 1:
+print("Error: The number of vertices/costs should be equal to number of nodes - 1")
+else:
+vertexCostList = [int(cost) for cost in vertexCostList]
+currentCarCharge = maxCharge # variable to keep track of current car charge as it travels
+stopsList + output list with suggested stops
+stopsList.append(cityList[0])
+for i in range(len(vertexCostList)):
+if currentCarCharge >= vertexCostList[i] * 2:
+currentCarCharge -= vertexCostList[i]
+Else:
+currentCarCharge = maxCharge
+currentCarCharge -= vertexCostList[i]
+stopsList.append(cityList[i])
+stopsList.append(cityList[-1])
+print("Output-> Here are the suggested stops: " + str(stopsList))
+```
+The time complexity for the above code is linear that is O(n) again, where n is the number of
+cities.
+The space complexity is however optimized using list data structure.
